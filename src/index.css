@@ -1,0 +1,51 @@
+:root {
+    /* -- fonts-size */
+    --extra: 4.445rem;
+    --title: 1.12rem;
+    --normal: 1rem;
+    --minus: 0.889rem;
+
+    /* -- colors - light theme  */
+    --bg: #FBEAFF;
+    --accent-1: #210637;
+    --accent-2: #7F6A9B;
+    --accent-3: #7B7484;
+    --linear-1: linear-gradient(100deg, #210637 34.82%, #7F6A9B 93.68%);
+    --linear-2: linear-gradient(269deg, #210637 37.02%, #7F6A9B 92.17%);
+
+    /* -- variables for dark theme */
+    /* 
+    --bg: #210637;
+    --accent-1: #FBEAFF;
+    --accent-2: #7F6A9B;
+    --accent-3: #7B7484;
+    --linear-1: linear-gradient(100deg, #FBEAFF 34.82%, #7F6A9B 93.68%);;
+    --linear-2: linear-gradient(269deg, #FBEAFF 37.02%, #7F6A9B 92.17%);
+    */
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+}
+
+* {
+    color: var(--accent-1);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    
+}
+
+body {
+    background-color: var(--bg);
+}
+
