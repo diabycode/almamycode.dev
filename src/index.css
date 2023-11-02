@@ -15,6 +15,12 @@
     --linear-1: linear-gradient(100deg, #210637 34.82%, #7f6a9b 93.68%);
     --linear-2: linear-gradient(269deg, #210637 37.02%, #7f6a9b 92.17%);
     --footer-linear: linear-gradient(180deg, #7b7484 -130.5%, #fbeaff 41.17%);
+    --linear-name: linear-gradient(
+        90deg,
+        #7d6899 41.9%,
+        #210637 59.81%,
+        #7f6a9b 86.53%
+    );
 
     /* -- variables for dark theme */
     /* 
@@ -24,11 +30,13 @@
     --accent-3: #7B7484;
     --linear-1: linear-gradient(100deg, #FBEAFF 34.82%, #7F6A9B 93.68%);;
     --linear-2: linear-gradient(269deg, #FBEAFF 37.02%, #7F6A9B 92.17%);
+    --linear-name: linear-gradient(90deg, #7F6A9B 44.3%, #FFF 57.28%, #4F3382 84.26%);
     */
 
     font-size: 18px;
     line-height: 1.5;
     font-weight: 400;
+    scroll-behavior: smooth;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -60,35 +68,21 @@ img {
 }
 .home-view {
     /* height: 100vh; */
-    /* max-height: 600px; */
+    /* max-height: 400px; */
     position: relative;
     overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+section {
+    padding: 3.2rem 10px;
 }
 svg {
     width: 35px;
     height: 100%;
 }
-.section {
-    margin-bottom: 5rem;
-}
-.section-padding {
-    padding: 0 10px;
-}
 
 /* -- header */
-.logo.zoomed .logo-closer {
-    z-index: 1000;
-}
-.logo-closer {
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
 .logo {
     position: relative;
     width: 34px;
@@ -148,6 +142,8 @@ nav.only-mobile {
     max-width: 230px;
     transform: translateX(240px);
     padding: 0 10px;
+    transition: all 0.3s ease-in-out;
+    z-index: 10000;
 }
 nav.only-mobile.show {
     transform: translateX(0);
@@ -185,6 +181,11 @@ nav.only-mobile .menu-closer svg {
 }
 .name {
     font-weight: 800;
+    background: var(--linear-name);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     /* font-size: 55px; */
 }
 .btn-link {
@@ -251,7 +252,6 @@ h3 {
 }
 .skills {
     overflow: hidden;
-    padding: 35px 0;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -277,7 +277,7 @@ h3 {
 
 /* --- projects */
 h3.extra {
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.2rem;
     line-height: 1.1;
     font-size: var(--extra);
     font-weight: 800;
@@ -360,6 +360,9 @@ h3.extra {
     transform: translateY(-50%);
     box-shadow: -7px 11px 36px rgba(0, 0, 0, 0.3);
 }
+section.footer {
+    padding-top: 0;
+}
 .footer .socials,
 .review {
     margin-bottom: 2rem;
@@ -371,6 +374,14 @@ h3.extra {
 .footer .socials ul li {
     display: flex;
     gap: 10px;
+    position: relative;
+}
+.footer .socials a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 .review ul {
     display: flex;

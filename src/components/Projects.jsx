@@ -1,3 +1,5 @@
+import { AnimeOnScroll } from "./animeOnScroll"
+import { motion } from 'framer-motion';
 
 export const projects = [
     {
@@ -16,7 +18,7 @@ export const projects = [
         } 
     },
     {
-        name: "Some project name",
+        name: "Some project name 2",
         desc: "Lorem ipsum dolor sit amet consectetur. Orci est consectetur convallis.",
         icon: {
             blue: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +32,7 @@ export const projects = [
         } 
     },
     {
-        name: "Some project name",
+        name: "Some project name 3",
         desc: "Lorem ipsum dolor sit amet consectetur. Orci est consectetur convallis.",
         icon: {
             blue: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,6 +47,24 @@ export const projects = [
         } 
     }
 ]
+
+export function Projects ( { theme }) {
+    return (
+        <>
+            <AnimeOnScroll>
+                <motion.h3 className='extra'> Projects </motion.h3>
+            </AnimeOnScroll>
+            <ul>
+                { projects.map( project => {
+                    return <AnimeOnScroll>
+                        <li key={project.name}> <ProjectItem name={project.name} desc={project.desc} showLink={project.showLink} icon={ theme == "blue" ? project.icon.blue : project.icon.white } />  </li>
+                    </AnimeOnScroll>
+
+                })}
+            </ul>
+        </>
+    )
+} 
 
 
 export function ProjectItem ( { name, desc, icon, showLink } ) {
