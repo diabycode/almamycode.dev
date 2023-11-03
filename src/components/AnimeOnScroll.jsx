@@ -4,10 +4,10 @@ import { useEffect, useRef } from 'react';
 export function AnimeOnScroll ( {children} ) {
 
     const ref = useRef() 
-    const isInView = useInView(ref, {once: true})
+    const isInView = useInView(ref)
 
     const baseStyles = {
-        transition: "all 400ms cubic-bezier(.47,1.64,.41,.8)",
+        transition: "all 430ms cubic-bezier(.47,1.64,.41,.8)",
     }
 
     const styles = isInView ? {
@@ -17,7 +17,7 @@ export function AnimeOnScroll ( {children} ) {
         opacity: 1
     } : {
         ...baseStyles,
-        transform: "translateY(50px)",
+        transform: "rotate(10deg) scale(0.4)",
         filter: "blur(5px)",
         opacity: 0
     }  

@@ -65,10 +65,6 @@ export const skills = [
 
 export function Skills () {
 
-    const dragConstrainsts = {
-        left: -200,
-        right: 200
-    }
 
     const ref = useRef(null)
 
@@ -76,11 +72,11 @@ export function Skills () {
         <>
             <motion.h3 ref={ref}> What i am good on </motion.h3>
             <div>
-                <motion.ul drag="x" dragConstraints={dragConstrainsts} >
+                <ul>
                     { skills.map( skill => {
                         return <li key={skill.label}> <SkillItem label={skill.label} logo={skill.logo} /> </li>
                     }) }
-                </motion.ul>
+                </ul>
             </div>
         </>
     )

@@ -259,6 +259,8 @@ h3 {
 .skills ul {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .skill-item svg {
     width: auto;
@@ -286,6 +288,15 @@ h3.extra {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.project-item,
+.blog-item {
+    border-right: 1px solid var(--accent-2);
+    border-bottom: 1px solid var(--accent-2);
+}
+.project-item:hover,
+.blog-item:hover {
+    box-shadow: 2px 2px 0px var(--accent-3);
+}
 .project-item .p-name,
 .blog-item .bp-title {
     font-weight: 600;
@@ -294,7 +305,7 @@ h3.extra {
     width: 24px;
 }
 .project-item .p-desc,
-.blog-item .bp-subtitle,
+.blog-item .bp-content,
 .blog-item .bp-title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -302,6 +313,10 @@ h3.extra {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
+}
+.project-item .p-desc,
+.blog-item .bp-content {
+    font-size: var(--minus);
 }
 .blog-item .bp-title {
     -webkit-line-clamp: 2;
