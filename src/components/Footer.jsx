@@ -35,7 +35,7 @@ export function Footer ( {theme} ) {
 
             <div className='review'>
                 <AnimeOnScroll>
-                <h3> review </h3>
+                <h3> go back to </h3>
                 </AnimeOnScroll>
                 <ul>
                     <li> <a href="#home"> Home </a> </li>

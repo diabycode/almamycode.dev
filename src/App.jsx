@@ -4,12 +4,14 @@ import {motion, useScroll} from 'framer-motion';
 import logo2 from './assets/images/profile - dark type.png';
 import {Button} from './components/Button.jsx';
 import {skills, SkillItem, Skills} from "./components/Skills.jsx";
-import {projects, ProjectItem, Projects} from "./components/Projects.jsx";
-import { blogPosts, BlogItem, BlogPosts } from "./components/BlogPosts.jsx"
+import {projects, ProjectItem} from "./components/Projects.jsx";
+import { blogPosts, BlogItem } from "./components/BlogPosts.jsx"
 import {AnimatedIntroduce} from "./components/AnimatedIntroduce.jsx";
 import {Socials} from "./components/Socials.jsx";
 import { LogoImg } from './components/LogoImg.jsx';
 import {Header} from "./components/Header.jsx";
+import {BlogPostDetails} from "./components/BlogPostDetails.jsx"
+import { AnimeOnScroll } from "./components/animeOnScroll";
 
 import blueModeSvg from "./assets/svg/SvgForBlueMode.jsx";
 import whiteModeSvg from "./assets/svg/SvgForWhiteMode.jsx";
@@ -24,6 +26,17 @@ function App() {
     const [theme, setTheme] = useState("blue")
     const [mobile, setMobile] = useState(false)
 
+    const [reader, setReader] = useState(false)
+    let [postData, setPostData] = useState({})
+
+    // getting post 
+    const getPost = ( postData ) => {
+        
+        setPostData(postData)
+        setReader(true)
+    }
+
+    // white and blue mode
     const switchMode = (mode) => {
         if (mode === "mobile") {
             setMobile(mobile => true)
@@ -80,7 +93,7 @@ function App() {
             <div className="decorator">
                 {theme === "blue" ? <blueModeSvg.HomeViewDecorator /> : <whiteModeSvg.HomeViewDecorator /> }
             </div>
-            <div className="body-content">
+            <div className={ reader ? "body-content reader" : "body-content" } >
                 <Section id="home" className={"home-view"}>
                     <div className="profile-indicator">
                         <p>
@@ -95,14 +108,37 @@ function App() {
                     <Skills />
                 </Section>
                 <Section id="projects" className="projects section">
-                    <Projects theme={theme} />
+                    <AnimeOnScroll>
+                        <motion.h3 className='extra'> Projects </motion.h3>
+                    </AnimeOnScroll>
+                    <ul>
+                        { projects.map( project => {
+                            return <AnimeOnScroll key={ project.name }>
+                                <li key={project.name}> <ProjectItem name={project.name} desc={project.desc} showLink={project.showLink} icon={ theme == "blue" ? project.icon.blue : project.icon.white } tags={project.tags} />  </li>
+                            </AnimeOnScroll>
+                        })}
+                    </ul>
                 </Section>
                 <Section id="blog" className="blogposts section">
-                    <BlogPosts />
+                    <AnimeOnScroll>
+                        <h3 className='extra'> Recently on my blog </h3>
+                    </AnimeOnScroll>
+                    <ul>
+                        { blogPosts.map( post => {
+                            return <AnimeOnScroll key={post.title}>
+                                <li key={post.title}> <BlogItem onOpened={getPost} postData={post} />  </li>
+                            </AnimeOnScroll>
+                        })}
+                    </ul>
                 </Section>
                 <Section className='footer section'>
                     <Footer theme={theme}/>
                 </Section>
+            </div>
+            <div className={reader ? "post-details" : "post-details closed"}>
+
+                { reader ? <BlogPostDetails readerCloser={() => setReader(false)} post={postData} /> : "" }
+
             </div>
         </>
     )
