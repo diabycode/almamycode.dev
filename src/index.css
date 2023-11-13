@@ -370,10 +370,13 @@ h3.extra {
 }
 .post-details img {
     object-position: 50% 20%;
-    max-height: 450px;
+    max-height: 400px;
+    width: auto;
+    display: block;
+    margin: auto;
 }
 .post-details strong {
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 .blog-item .author span,
 .post-details .author span {
@@ -518,6 +521,20 @@ section.footer {
     display: inline-block;
     width: 100%;
 }
+.post-details h3 {
+    background: var(--linear-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.post-details p > strong {
+    background: var(--linear-2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
 .post-details h2 {
     font-size: 2rem;
 }
