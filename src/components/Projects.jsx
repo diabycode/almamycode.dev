@@ -19,6 +19,7 @@ export const projects = [
             </svg>
 
         },
+        showLink: "https://diabycode.pythonanywhere.com/",
         tags: [
             "Django",
             "Python",

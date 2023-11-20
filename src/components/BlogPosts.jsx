@@ -1,13 +1,12 @@
 import React, { ReactDOM } from "react";
 
-import { AnimeOnScroll } from "./animeOnScroll";
 import profileCoverImage from "../assets/images/blogposts/profile - dark type.png";
-import coverImage from "../assets/images/blogposts/blog-cover-img.jpg";
-import { BlogPostDetails } from "./BlogPostDetails";
+import coverImage from "../assets/images/blogposts/interface-web.png";
 
 // markdowns
 import introduce from "../blogposts/introduce.md";
-import repo from "../blogposts/comment-cloner-un-repo.md";
+import article2 from "../blogposts/pourquoi-devez-vous-absolument-avoir-un-site-web-pour-votre-entreprise-ou-business.md";
+
 
 export const blogPosts = [
     {
@@ -22,13 +21,16 @@ export const blogPosts = [
     },
     {
         id: "002",
-        title: "Comment cloner/installer un dépôt/projet python GitHub et exécuter les fichier en local",
-        subtitle: "Lorem ipx sum dolor sit amet consectetur. Pellentesque molestie iaculis auctor a eu. Amet mattis sagittis id cras.",
-        content: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus ut dolor. Vestibulum ante ipsum primis in faucibus orci luctus ut dolor Vestibulum ante ipsum primis in faucibus orci luctus ut dolor Vestibulum ante ipsum primis in faucibus orci luctus ut dolor Vestibulum ante ipsum primis in faucibus orci luctus ut dolor",
+        title: "Pourquoi devez-vous absolument avoir un site web pour votre entreprise ou business ?",
+        subtitle: "Dans cet article, je vais vous présenter quelques points clés sur le poids qu'a un site web dans votre business.",
+        content: `Un site web est une page, une plateforme consultable depuis un navigateur via une adresse URL précise.
+        Attention. Je ne vous parle pas d'un profil Facebook, Twitter ou autres... Non !
+        Je vous parle de quelque chose de propre à vous, reflétant votre image de marque.
+        Nombreux sont les entrepreneurs qui négligent ce détail, surtout les entrepreneurs africains pour qui un site web n'est pas nécessaire.`,
         author: "Diaby Almamy",
         publish_date: "Oct 26",
         coverImage: coverImage,
-        markdownPath: repo
+        markdownPath: article2
     }
 ]
 

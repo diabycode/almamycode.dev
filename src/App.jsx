@@ -121,7 +121,7 @@ function App() {
                 </Section>
                 <Section id="blog" className="blogposts section">
                     <AnimeOnScroll>
-                        <h3 className='extra'> Recently on my blog </h3>
+                        <h3 className='extra'> Some articles </h3>
                     </AnimeOnScroll>
                     <ul>
                         { blogPosts.map( post => {
