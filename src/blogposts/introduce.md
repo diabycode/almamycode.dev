@@ -1,4 +1,4 @@
-![image](/src/assets/images/blogposts/profile%20-%20dark%20type.png)
+![image](https://raw.githubusercontent.com/diabycode/almamycode.dev/main/src/assets/images/blogposts/profile%20-%20dark%20type.png)
 
 Diaby est un jeune développeur muni de plus de quatre ans d'expérience. Depuis son plus jeune âge, il a toujours été intéressé par les technologies émergentes. Il a découvert sa passion pour la programmation en 2017. Après l'obtention de son baccalauréat en 2020, il a décidé de poursuivre ses études en développement d'applications web et mobiles à l' **Université Internationale des Sciences et Technologies** (UIST) à **Abidjan, Côte d’Ivoire**.
 
