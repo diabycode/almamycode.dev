@@ -638,3 +638,8 @@ section.footer {
         height: 300px;
     }
 }
+@media screen and (max-width: 420px) {
+    .post-details img {
+        width: 100%;
+    }
+}
