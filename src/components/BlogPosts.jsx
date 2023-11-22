@@ -57,7 +57,7 @@ export function BlogItem ( {
             </div>
             <div className="core">
                 <div>
-                    <p className="bp-title"> { title } </p>
+                    <p className="bp-title"> {"[FR] " + title } </p>
                     <p className="bp-content"> { content } </p>
                 </div>
                 <div className="cover-img">
