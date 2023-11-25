@@ -24,7 +24,6 @@ N'hésitez pas à me contacter dès maintenant via les différents réseaux que 
 
 ### Mes réseaux :
 
--   [Site Web](https://diabycode.github.io/site-vitrine/)
 -   [LinkedIn](https://www.linkedin.com/in/almamy-youssouf-diaby-276153257/)
 -   [Facebook](https://www.facebook.com/almamy.code/)
 -   [Whatsapp](https://wa.me/message/DKWXPBAQMH5OC1)

@@ -23,7 +23,7 @@ export function AnimatedIntroduce () {
             initial='hidden'
             animate='visible'
 
-        >Hello, my name is <span className='name'>DIABY Almamy</span>, I am a software developper based in Abidjan, Ivory Cost !</motion.p>
+        >Hello, my name is <span className='name'>DIABY Almamy</span>, I am a software developer based in Abidjan, Ivory Cost !</motion.p>
 
     )
 }
